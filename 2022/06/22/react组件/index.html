@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>react组件 | 博客CS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="hello react引入react官方核心库，以及react-dom渲染库 虚拟dom特点渲染速度快，进行虚拟dom树，变化前后对比，将不同的数据对象进行真实dom渲染，虚拟dom就是一个对象，比真实dom更加轻量级，效率更高。 虚拟dom两种创建方式第一种：jsx语法创建虚拟dom（推荐） 1(&lt;h4 title&#x3D;&quot;hello,react&quot;&gt;&lt;span&amp;g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react组件">
+<meta property="og:url" content="http://example.com/txs00/2022/06/22/react%E7%BB%84%E4%BB%B6/index.html">
+<meta property="og:site_name" content="博客CS">
+<meta property="og:description" content="hello react引入react官方核心库，以及react-dom渲染库 虚拟dom特点渲染速度快，进行虚拟dom树，变化前后对比，将不同的数据对象进行真实dom渲染，虚拟dom就是一个对象，比真实dom更加轻量级，效率更高。 虚拟dom两种创建方式第一种：jsx语法创建虚拟dom（推荐） 1(&lt;h4 title&#x3D;&quot;hello,react&quot;&gt;&lt;span&amp;g">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-06-22T08:54:01.000Z">
+<meta property="article:modified_time" content="2022-06-22T09:23:30.030Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/txs00/atom.xml" title="博客CS" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/txs00/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/txs00/" id="logo">博客CS</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/txs00/">Home</a>
+        
+          <a class="main-nav-link" href="/txs00/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/txs00/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com/txs00"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-react组件" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/txs00/2022/06/22/react%E7%BB%84%E4%BB%B6/" class="article-date">
+  <time datetime="2022-06-22T08:54:01.000Z" itemprop="datePublished">2022-06-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      react组件
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="hello-react"><a href="#hello-react" class="headerlink" title="hello react"></a>hello react</h3><p>引入react官方核心库，以及react-dom渲染库</p>
+<h3 id="虚拟dom特点"><a href="#虚拟dom特点" class="headerlink" title="虚拟dom特点"></a>虚拟dom特点</h3><p>渲染速度快，进行虚拟dom树，变化前后对比，将不同的数据对象进行真实dom渲染，虚拟dom就是一个对象，比真实dom更加轻量级，效率更高。</p>
+<h3 id="虚拟dom两种创建方式"><a href="#虚拟dom两种创建方式" class="headerlink" title="虚拟dom两种创建方式"></a>虚拟dom两种创建方式</h3><p>第一种：jsx语法创建虚拟dom（推荐）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="tag">&lt;<span class="name">h4</span> <span class="attr">title</span>=<span class="string">&quot;hello,react&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello,react<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">h4</span>&gt;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>第二种：使用官方api创建虚拟dom</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">React</span>.<span class="title function_">createElement</span>(<span class="string">&quot;h4&quot;</span>,&#123;<span class="attr">title</span>:<span class="string">&quot;hello,react&quot;</span>&#125;,<span class="title class_">React</span>.<span class="title function_">createElement</span>(<span class="string">&quot;span&quot;</span>,&#123;&#125;,<span class="string">&quot;hello,react&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="jsx语法-javascript-XML"><a href="#jsx语法-javascript-XML" class="headerlink" title="jsx语法,(javascript+XML)"></a>jsx语法,(javascript+XML)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">    jsx语法规则：</span></span><br><span class="line"><span class="comment">        1.定义虚拟DOM时，不要写引号。</span></span><br><span class="line"><span class="comment">        2.标签中混入JS表达式时要用&#123;&#125;。</span></span><br><span class="line"><span class="comment">        3.样式的类名指定不要用class，要用className。</span></span><br><span class="line"><span class="comment">        4.内联样式，要用style=&#123;&#123;key:value&#125;&#125;的形式去写。</span></span><br><span class="line"><span class="comment">        5.只有一个根标签</span></span><br><span class="line"><span class="comment">        6.标签必须闭合</span></span><br><span class="line"><span class="comment">        7.标签首字母</span></span><br><span class="line"><span class="comment">                (1).若小写字母开头，则将该标签转为html中同名元素，若html中无该标签对应的同名元素，则报错。</span></span><br><span class="line"><span class="comment">                (2).若大写字母开头，react就去渲染对应的组件，若组件没有定义，则报错。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">    一定注意区分：【js语句(代码)】与【js表达式】</span></span><br><span class="line"><span class="comment">            1.表达式：一个表达式会产生一个值，可以放在任何一个需要值的地方</span></span><br><span class="line"><span class="comment">                        下面这些都是表达式：</span></span><br><span class="line"><span class="comment">                                (1). a</span></span><br><span class="line"><span class="comment">                                (2). a+b</span></span><br><span class="line"><span class="comment">                                (3). demo(1)</span></span><br><span class="line"><span class="comment">                                (4). arr.map() </span></span><br><span class="line"><span class="comment">                                (5). function test () &#123;&#125;</span></span><br><span class="line"><span class="comment">            2.语句(代码)：</span></span><br><span class="line"><span class="comment">                        下面这些都是语句(代码)：</span></span><br><span class="line"><span class="comment">                                (1).if()&#123;&#125;</span></span><br><span class="line"><span class="comment">                                (2).for()&#123;&#125;</span></span><br><span class="line"><span class="comment">                                (3).switch()&#123;case:xxxx&#125;</span></span><br><span class="line"><span class="comment">  </span></span><br><span class="line"><span class="comment">    */</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="react类组件的创建"><a href="#react类组件的创建" class="headerlink" title="react类组件的创建"></a>react类组件的创建</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">类组件也叫有状态组件（state）</span><br><span class="line">state,数据对应的setState更新试图方法</span><br><span class="line">setState第一个参数为想要更新的state属性</span><br><span class="line">setState是一个异步方法，想要有同步处理，在第二个参数回调中操作</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick=&#123;回调函数&#125;&gt;加&lt;/button&gt;  驼峰命名</span><br><span class="line"></span><br><span class="line">改变this指向错误的方式：</span><br><span class="line">    1、通过this.add = this.add.bind(this)</span><br><span class="line">    2、箭头函数onClick=&#123;()=&gt;&#123;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h3><p>1.做一个单选样式切换，要求收集用户年龄段：[“0-20”,”20-25”,”25-30”,”30以上”]<br>2.做一个多选样式选择，要求收集用户喜好:[“篮球”,”游戏”,”看书”,”爬山”]</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/txs00/2022/06/22/react%E7%BB%84%E4%BB%B6/" data-id="cl4pf0glw0000vscybkgcc84z" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/txs00/2022/06/21/%E5%8F%82%E8%80%83%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">js复习</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/txs00/archives/2022/06/">六月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/txs00/2022/06/22/react%E7%BB%84%E4%BB%B6/">react组件</a>
+          </li>
+        
+          <li>
+            <a href="/txs00/2022/06/21/%E5%8F%82%E8%80%83%E7%AC%94%E8%AE%B0/">js复习</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/txs00/" class="mobile-nav-link">Home</a>
+  
+    <a href="/txs00/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/txs00/fancybox/jquery.fancybox.css">
+
+  
+<script src="/txs00/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/txs00/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
