@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>watch | 博客CS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="react案例：钟表css样式：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&lt;style&gt;        .demo &amp;#123;            width: 500px;            height: 500px;            bac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="watch">
+<meta property="og:url" content="https://txs00.github.io/2022/06/25/test/watch/index.html">
+<meta property="og:site_name" content="博客CS">
+<meta property="og:description" content="react案例：钟表css样式：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&lt;style&gt;        .demo &amp;#123;            width: 500px;            height: 500px;            bac">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://txs00.github.io/images/watch.png">
+<meta property="article:published_time" content="2022-06-25T08:54:01.000Z">
+<meta property="article:modified_time" content="2022-07-09T02:53:02.495Z">
+<meta property="article:author" content="TXS">
+<meta property="article:tag" content="钟表、当前时间">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://txs00.github.io/images/watch.png">
+  
+    <link rel="alternate" href="/atom.xml" title="博客CS" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">博客CS</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://txs00.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-test/watch" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/06/25/test/watch/" class="article-date">
+  <time datetime="2022-06-25T08:54:01.000Z" itemprop="datePublished">2022-06-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BB%83%E4%B9%A0%E6%A1%88%E4%BE%8B/">练习案例</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      watch
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="react案例：钟表"><a href="#react案例：钟表" class="headerlink" title="react案例：钟表"></a>react案例：钟表</h1><h3 id="css样式："><a href="#css样式：" class="headerlink" title="css样式："></a>css样式：</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">        <span class="selector-class">.demo</span> &#123;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">500px</span>;</span><br><span class="line">            <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">&#x27;./img/watch.webp&#x27;</span>) center no-repeat;</span><br><span class="line">            <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line">            <span class="attribute">background-size</span>: cover;</span><br><span class="line">            <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">            <span class="attribute">position</span>: relative;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-class">.second</span> &#123;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">180px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">3px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: brown;</span><br><span class="line">            <span class="attribute">position</span>: absolute;</span><br><span class="line">            <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">            <span class="attribute">top</span>: <span class="number">15%</span>;</span><br><span class="line">            <span class="attribute">transform-origin</span>: bottom;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-class">.min</span> &#123;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">3px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: aqua;</span><br><span class="line">            <span class="attribute">position</span>: absolute;</span><br><span class="line">            <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">            <span class="attribute">top</span>: <span class="number">21%</span>;</span><br><span class="line">            <span class="attribute">transform-origin</span>: bottom;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="selector-class">.hour</span> &#123;</span><br><span class="line">            <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">            <span class="attribute">width</span>: <span class="number">3px</span>;</span><br><span class="line">            <span class="attribute">background-color</span>: black;</span><br><span class="line">            <span class="attribute">position</span>: absolute;</span><br><span class="line">            <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">            <span class="attribute">top</span>: <span class="number">31%</span>;</span><br><span class="line">            <span class="attribute">transform-origin</span>: bottom;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="selector-class">.datetime</span>&#123;</span><br><span class="line">            <span class="attribute">position</span>: relative;</span><br><span class="line">            <span class="attribute">top</span>: -<span class="number">10%</span>;</span><br><span class="line">            <span class="attribute">left</span>: <span class="number">40%</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="html代码"><a href="#html代码" class="headerlink" title="html代码"></a>html代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/babel&quot;</span>&gt;</span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Circle</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">        state = &#123;</span><br><span class="line">            <span class="attr">second</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="attr">min</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="attr">hour</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">            <span class="attr">timedate</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="title function_">componentDidMount</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">let</span> s = <span class="number">6</span> * <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getSeconds</span>()</span><br><span class="line">                <span class="keyword">let</span> m = <span class="number">6</span> * <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getMinutes</span>() + s / <span class="number">60</span> * <span class="number">6</span> / <span class="number">6</span></span><br><span class="line">                <span class="keyword">let</span> h = <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getHours</span>() * <span class="number">30</span> + m / <span class="number">60</span> * <span class="number">5</span></span><br><span class="line">                <span class="keyword">let</span> timedate = <span class="string">`<span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>().getHours()&#125;</span>:<span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>().getMinutes()&#125;</span>:<span class="subst">$&#123;<span class="keyword">new</span> <span class="built_in">Date</span>().getSeconds()&#125;</span>`</span></span><br><span class="line">                <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123;</span><br><span class="line">                    <span class="attr">second</span>: s,</span><br><span class="line">                    <span class="attr">min</span>: m,</span><br><span class="line">                    <span class="attr">hour</span>: h,</span><br><span class="line">                    timedate</span><br><span class="line">                &#125;, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="title function_">render</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> (</span><br><span class="line">                <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#x27;demo&#x27;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                    <span class="tag">&lt;<span class="name">h4</span> <span class="attr">className</span>=<span class="string">&#x27;datetime&#x27;</span>&gt;</span>时间：&#123;this.state.timedate&#125;<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#x27;second&#x27;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                        <span class="attr">style</span>=<span class="string">&#123;&#123;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                            <span class="attr">transform:</span> `<span class="attr">rotate</span>($&#123;<span class="attr">this.state.second</span>&#125;<span class="attr">deg</span>)`</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                        &#125;&#125;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                    &gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#x27;min&#x27;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                        <span class="attr">style</span>=<span class="string">&#123;&#123;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                            <span class="attr">transform:</span> `<span class="attr">rotate</span>($&#123;<span class="attr">this.state.min</span>&#125;<span class="attr">deg</span>)`</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                        &#125;&#125;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                    &gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#x27;hour&#x27;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml"></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                        <span class="attr">style</span>=<span class="string">&#123;&#123;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                            <span class="attr">transform:</span> `<span class="attr">rotate</span>($&#123;<span class="attr">this.state.hour</span>&#125;<span class="attr">deg</span>)`</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                        &#125;&#125;</span></span></span><br><span class="line"><span class="tag"><span class="language-xml">                    &gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">                &lt;/div &gt;</span></span><br><span class="line"><span class="language-xml">            )</span></span><br><span class="line"><span class="language-xml">        &#125;</span></span><br><span class="line"><span class="language-xml">    &#125;</span></span><br><span class="line"><span class="language-xml">    ReactDOM.render(<span class="tag">&lt;<span class="name">Circle</span> /&gt;</span>, document.getElementById(&#x27;app&#x27;))</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h4 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h4><p><img src="/../../images/watch.png" alt="watch"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://txs00.github.io/2022/06/25/test/watch/" data-id="cl5db40jd000758cy194wayru" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%92%9F%E8%A1%A8%E3%80%81%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4/" rel="tag">钟表、当前时间</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/06/26/test/3D-picture/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          3D-picture
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/06/24/test/circle/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">circle</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E8%BF%9B%E5%BA%A6/">学习进度</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%83%E4%B9%A0%E6%A1%88%E4%BE%8B/">练习案例</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3D%E5%9B%BE%E7%89%87%E5%B1%95%E7%A4%BA/" rel="tag">3D图片展示</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js%E5%A4%8D%E4%B9%A0/" rel="tag">js复习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raact%E4%B8%89%E5%A4%A7%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7%E4%B9%8Bprops/" rel="tag">raact三大核心属性之props</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raact%E4%B8%89%E5%A4%A7%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7%E4%B9%8Bref/" rel="tag">raact三大核心属性之ref</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raact%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E3%80%81%E8%84%9A%E6%89%8B%E6%9E%B6/" rel="tag">raact条件判断、脚手架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-hooks/" rel="tag">react-hooks</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react-redux/" rel="tag">react-redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7state%E3%80%81react%E7%BB%84%E4%BB%B6/" rel="tag">react核心属性state、react组件</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react%E8%84%9A%E6%89%8B%E6%9E%B6%E3%80%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" rel="tag">react脚手架、生命周期</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react%E8%B7%AF%E7%94%B1/" rel="tag">react路由</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react%E8%B7%AF%E7%94%B1NavLink%E3%80%81withRouter%E3%80%81Redirect/" rel="tag">react路由NavLink、withRouter、Redirect</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82/" rel="tag">react路由传参</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/" rel="tag">redux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todolist/" rel="tag">todolist</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%86%E7%90%83%E8%BD%AC%E5%8A%A8/" rel="tag">圆球转动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%92%9F%E8%A1%A8%E3%80%81%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4/" rel="tag">钟表、当前时间</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/3D%E5%9B%BE%E7%89%87%E5%B1%95%E7%A4%BA/" style="font-size: 10px;">3D图片展示</a> <a href="/tags/js%E5%A4%8D%E4%B9%A0/" style="font-size: 10px;">js复习</a> <a href="/tags/raact%E4%B8%89%E5%A4%A7%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7%E4%B9%8Bprops/" style="font-size: 10px;">raact三大核心属性之props</a> <a href="/tags/raact%E4%B8%89%E5%A4%A7%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7%E4%B9%8Bref/" style="font-size: 10px;">raact三大核心属性之ref</a> <a href="/tags/raact%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E3%80%81%E8%84%9A%E6%89%8B%E6%9E%B6/" style="font-size: 10px;">raact条件判断、脚手架</a> <a href="/tags/react-hooks/" style="font-size: 10px;">react-hooks</a> <a href="/tags/react-redux/" style="font-size: 10px;">react-redux</a> <a href="/tags/react%E6%A0%B8%E5%BF%83%E5%B1%9E%E6%80%A7state%E3%80%81react%E7%BB%84%E4%BB%B6/" style="font-size: 10px;">react核心属性state、react组件</a> <a href="/tags/react%E8%84%9A%E6%89%8B%E6%9E%B6%E3%80%81%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" style="font-size: 10px;">react脚手架、生命周期</a> <a href="/tags/react%E8%B7%AF%E7%94%B1/" style="font-size: 10px;">react路由</a> <a href="/tags/react%E8%B7%AF%E7%94%B1NavLink%E3%80%81withRouter%E3%80%81Redirect/" style="font-size: 10px;">react路由NavLink、withRouter、Redirect</a> <a href="/tags/react%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82/" style="font-size: 10px;">react路由传参</a> <a href="/tags/redux/" style="font-size: 10px;">redux</a> <a href="/tags/todolist/" style="font-size: 10px;">todolist</a> <a href="/tags/%E5%9C%86%E7%90%83%E8%BD%AC%E5%8A%A8/" style="font-size: 10px;">圆球转动</a> <a href="/tags/%E9%92%9F%E8%A1%A8%E3%80%81%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4/" style="font-size: 10px;">钟表、当前时间</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/07/09/study/day11%E5%92%8Cday12/">day11、day12</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/09/study/day15/">day15</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/09/study/day14/">day14</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/02/study/day10/">day10</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/01/study/day09/">day09</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 TXS<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
