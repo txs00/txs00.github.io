@@ -5,11 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="day15, 博客CS">
-    <meta name="description" content="react-redux的使用
-安装react-redux，命令cnpm i react-redux -D
-使用react-redux提供的Provider进行根组件包裹
-将store作为属性传递给Provider
-containers文件夹">
+    <meta name="description" content="redux配置持久化参考网址：https://blog.csdn.net/hbmern/article/details/1241843091.安装：npm i  redux-persist –save2.配置store.js文件
+12345">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -434,8 +431,8 @@ containers文件夹">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/react-redux/">
-                                <span class="chip bg-color">react-redux</span>
+                            <a href="/tags/redux-%E6%8C%81%E4%B9%85%E5%8C%96/">
+                                <span class="chip bg-color">redux-持久化</span>
                             </a>
                         
                     </div>
@@ -480,28 +477,8 @@ containers文件夹">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="react-redux的使用"><a href="#react-redux的使用" class="headerlink" title="react-redux的使用"></a>react-redux的使用</h3><ol>
-<li>安装react-redux，命令cnpm i react-redux -D</li>
-<li>使用react-redux提供的Provider进行根组件包裹</li>
-<li>将store作为属性传递给Provider</li>
-<li>containers文件夹中,创建容器组件</li>
-<li>import { connect } from ‘react-redux’,引入容器组件和redux连接方法</li>
-<li>export default connect(mapStateToProps,mapDisptchToProps)(Count)，使用connect方法</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">connect</span>()()   <span class="comment">// 第一个括号是方法，第二个括号为连接的UI组件</span></span><br></pre></td></tr></table></figure>
-
-<ol start="7">
-<li>创建接受的方法，分别接受state数据和 派发动作</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义一个函数成为我们的connect第一个参数，用途为接受redux中的数据,作用将redux中的数据转换成props</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">mapStateToProps</span>  = (<span class="params">state</span>)=&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">count123</span>:state.<span class="property">count</span>,</span><br><span class="line">        <span class="attr">todo</span>:state.<span class="property">todolist</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 将redux中的派发动作转换到props中</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">mapDisptchToProps</span> =(<span class="params">dispatch</span>)=&gt;&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        <span class="attr">add</span>:<span class="function">()=&gt;</span>&#123;</span><br><span class="line">            <span class="title function_">dispatch</span>(<span class="title function_">add_aciton</span>())</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="8">
-<li>容器组件通过props进行获取使用</li>
-</ol>
-<h3 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h3><p>react-redux版本购物车，可以自适应高度的，功能全，明天检查</p>
-<h3 id="immutable-js的使用"><a href="#immutable-js的使用" class="headerlink" title="immutable.js的使用"></a>immutable.js的使用</h3><p>应用解决react页面不刷新的拷贝复杂数据问题</p>
-<p>学习博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/it_varlue/article/details/120440094">https://blog.csdn.net/it_varlue/article/details/120440094</a><br>学习博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/yrqlyq/article/details/119318805">https://blog.csdn.net/yrqlyq/article/details/119318805</a></p>
-<p>1.安装 npm i -S immutable<br>2.引入使用 import { Map, List, fromJS, is } from ‘immutable’<br>3.Map管理对象类型数据，List管理数组类型数据，fromJs自动可以转换相应的数据类型Map，List。is，可以做immutable数据类型对比<br>4.List([123])，Map({name:”张三”})转换回普通数组和对象，使用toJS方法</p>
+                <h3 id="redux配置持久化"><a href="#redux配置持久化" class="headerlink" title="redux配置持久化"></a>redux配置持久化</h3><p>参考网址：<a target="_blank" rel="noopener" href="https://blog.csdn.net/hbmern/article/details/124184309">https://blog.csdn.net/hbmern/article/details/124184309</a><br>1.安装：npm i  redux-persist –save<br>2.配置store.js文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// applyMiddleware为中间件，支持异步action</span></span><br><span class="line"><span class="comment">// combineReducers方法用于合并多个reducer</span></span><br><span class="line"><span class="keyword">import</span> &#123;createStore,applyMiddleware,combineReducers&#125; <span class="keyword">from</span> <span class="string">&#x27;redux&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123;persistStore, persistReducer&#125; <span class="keyword">from</span> <span class="string">&#x27;redux-persist&#x27;</span></span><br><span class="line"><span class="keyword">import</span> storage <span class="keyword">from</span> <span class="string">&#x27;redux-persist/lib/storage&#x27;</span></span><br><span class="line"><span class="keyword">import</span> countReduce  <span class="keyword">from</span> <span class="string">&#x27;../reduces/count_reduce&#x27;</span></span><br><span class="line"><span class="keyword">import</span> todoReduce <span class="keyword">from</span> <span class="string">&#x27;../reduces/todolist_reduce&#x27;</span></span><br><span class="line"><span class="comment">// 异步action插件，配合applyMiddleware使用</span></span><br><span class="line"><span class="keyword">import</span> thunk <span class="keyword">from</span> <span class="string">&#x27;redux-thunk&#x27;</span></span><br><span class="line"><span class="keyword">const</span> allReducer = <span class="title function_">combineReducers</span>(&#123;</span><br><span class="line">    <span class="attr">count</span>:countReduce,</span><br><span class="line">    <span class="attr">todolist</span>:todoReduce</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//在localStorge中生成key为root的值</span></span><br><span class="line"><span class="keyword">const</span> persistConfig = &#123;</span><br><span class="line">    <span class="attr">key</span>: <span class="string">&#x27;roots&#x27;</span>,</span><br><span class="line">    storage,</span><br><span class="line">    <span class="attr">blacklist</span>:[<span class="string">&#x27;todolist&#x27;</span>]  <span class="comment">//设置某个reducer数据不持久化，</span></span><br><span class="line">                      <span class="comment">//注意单词的拼写！我就因为写错单词，找了半天,55555~</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> myPersistReducer = <span class="title function_">persistReducer</span>(persistConfig, allReducer)</span><br><span class="line"><span class="keyword">const</span> store = <span class="title function_">createStore</span>(myPersistReducer,<span class="title function_">applyMiddleware</span>(thunk))</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> persistor = <span class="title function_">persistStore</span>(store)</span><br><span class="line"> </span><br><span class="line"><span class="keyword">export</span> &#123;</span><br><span class="line">  store,</span><br><span class="line">  persistor</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
                 
             </div>
@@ -528,7 +505,7 @@ containers文件夹">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://txs00.github.io/2022/07/09/study/day15/">https://txs00.github.io/2022/07/09/study/day15/</a>
+                    <a href="https://txs00.github.io/2022/07/09/study/day16/">https://txs00.github.io/2022/07/09/study/day16/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -566,8 +543,8 @@ containers文件夹">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/react-redux/">
-                                    <span class="chip bg-color">react-redux</span>
+                                <a href="/tags/redux-%E6%8C%81%E4%B9%85%E5%8C%96/">
+                                    <span class="chip bg-color">redux-持久化</span>
                                 </a>
                             
                         </div>
@@ -745,13 +722,13 @@ containers文件夹">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/07/09/study/day11%E5%92%8Cday12/">
+                <a href="/2022/07/09/study/day15/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="day11、day12">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="day15">
                         
-                        <span class="card-title">day11、day12</span>
+                        <span class="card-title">day15</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -779,8 +756,8 @@ containers文件夹">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/react-hooks/">
-                        <span class="chip bg-color">react-hooks</span>
+                    <a href="/tags/react-redux/">
+                        <span class="chip bg-color">react-redux</span>
                     </a>
                     
                 </div>
@@ -794,13 +771,13 @@ containers文件夹">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/07/09/study/day16/">
+                <a href="/2022/07/09/study/day14/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="day15">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="day14">
                         
-                        <span class="card-title">day15</span>
+                        <span class="card-title">day14</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -828,8 +805,8 @@ containers文件夹">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/redux-%E6%8C%81%E4%B9%85%E5%8C%96/">
-                        <span class="chip bg-color">redux-持久化</span>
+                    <a href="/tags/redux/">
+                        <span class="chip bg-color">redux</span>
                     </a>
                     
                 </div>
