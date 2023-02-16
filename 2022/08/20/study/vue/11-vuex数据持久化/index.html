@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vue, 博客CS">
+    <meta name="keywords" content="vuex-persistedstate, 博客CS">
     <meta name="description" content="vuex-persistedstate持久化原理：结合本地存储做到数据状态持久化，使页面刷新后数据不会初始化为默认状态
 Vuex为什么要持久化?
 原因：因为Vuex是基于内存，存在内存里面的，刷新网页之后就没有了，不会持久化储存
@@ -23,7 +23,7 @@ Vuex为什么要持久化?
 
     
 
-    <title>vue | 博客CS</title>
+    <title>vuex-persistedstate | 博客CS</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -313,12 +313,12 @@ Vuex为什么要持久化?
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vue</h1>
+                    <h1 class="description center-align post-title">vuex-persistedstate</h1>
                 </div>
             </div>
         </div>
@@ -495,6 +495,7 @@ Vuex为什么要持久化?
 <h2 id="4、部分数据持久化"><a href="#4、部分数据持久化" class="headerlink" title="4、部分数据持久化"></a>4、部分数据持久化</h2><h3 id="1、vuex-persistedstate提供有一个reducer函数，可以自定义存储Key"><a href="#1、vuex-persistedstate提供有一个reducer函数，可以自定义存储Key" class="headerlink" title="1、vuex-persistedstate提供有一个reducer函数，可以自定义存储Key"></a>1、vuex-persistedstate提供有一个reducer函数，可以自定义存储Key</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// 实现持久化部分数据，被持久化的数据为：manage模块的isVisitor、login模块的time</span><br><span class="line"></span><br><span class="line">import createPersistedState from &#x27;vuex-persistedstate&#x27;;</span><br><span class="line"></span><br><span class="line">Vue.use(Vuex);</span><br><span class="line">export default new Vuex.store(&#123;</span><br><span class="line">    modules:&#123;</span><br><span class="line">        manage,</span><br><span class="line">        login,</span><br><span class="line">        userInfo,</span><br><span class="line">        //...</span><br><span class="line">    &#125;,</span><br><span class="line">    strict:debug,</span><br><span class="line">    plugins:[</span><br><span class="line">        createPersistedState(&#123;</span><br><span class="line">            reducer(val)&#123; // 注意: 指定需要持久化的数据</span><br><span class="line">                return &#123;</span><br><span class="line">                    isVisitor:val.manage.isVisitor,</span><br><span class="line">                    time:val.login.time</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <h3 id="2、使用paths参数【推荐：使用更为简单】"><a href="#2、使用paths参数【推荐：使用更为简单】" class="headerlink" title="2、使用paths参数【推荐：使用更为简单】"></a>2、使用paths参数【推荐：使用更为简单】</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// 实现持久化部分数据，被持久化的数据为：manage模块的isAdmin、login模块的token</span><br><span class="line"></span><br><span class="line">import createPersistedState from &#x27;vuex-persistedstate&#x27;;</span><br><span class="line"></span><br><span class="line">Vue.use(Vuex);</span><br><span class="line">const PERSIST_PATHS = [&#x27;manage.isAdmin&#x27;,&#x27;login.token&#x27;]; // 注意</span><br><span class="line">export default new Vuex.store(&#123;</span><br><span class="line">    modules:&#123;</span><br><span class="line">        manage,</span><br><span class="line">        login,</span><br><span class="line">        userInfo,</span><br><span class="line">        //...</span><br><span class="line">    &#125;,</span><br><span class="line">    strict:debug,</span><br><span class="line">    plugins:[</span><br><span class="line">        createPersistedState(&#123;</span><br><span class="line">            paths:PERSIST_PATHS // 注意</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
                 
             </div>
             <hr/>
@@ -741,9 +742,9 @@ Vuex为什么要持久化?
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="vue">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="vue路由">
                         
-                        <span class="card-title">vue</span>
+                        <span class="card-title">vue路由</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vue, 博客CS">
+    <meta name="keywords" content="vue路由, 博客CS">
     <meta name="description" content="路由
 理解： 一个路由（route）就是一组映射关系（key - value），多个路由需要路由器（router）进行管理。
 前端路由：key是路径，value是组件。
@@ -24,7 +24,7 @@
 
     
 
-    <title>vue | 博客CS</title>
+    <title>vue路由 | 博客CS</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -314,12 +314,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vue</h1>
+                    <h1 class="description center-align post-title">vue路由</h1>
                 </div>
             </div>
         </div>
@@ -498,10 +498,10 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-view&gt;&lt;/router-view&gt;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="2-几个注意点"><a href="#2-几个注意点" class="headerlink" title="2.几个注意点"></a>2.几个注意点</h3><ol>
-<li>路由组件通常存放在<code>views</code>文件夹，一般组件通常存放在<code>components</code>文件夹。</li>
+<li>路由组件通常存放在 <code>views</code>文件夹，一般组件通常存放在 <code>components</code>文件夹。</li>
 <li>通过切换，“隐藏”了的路由组件，默认是被销毁掉的，需要的时候再去挂载。</li>
-<li>每个组件都有自己的<code>$route</code>属性，里面存储着自己的路由信息。</li>
-<li>整个应用只有一个router，可以通过组件的<code>$router</code>属性获取到。</li>
+<li>每个组件都有自己的 <code>$route</code>属性，里面存储着自己的路由信息。</li>
+<li>整个应用只有一个router，可以通过组件的 <code>$router</code>属性获取到。</li>
 </ol>
 <h3 id="3-多级路由（多级路由）"><a href="#3-多级路由（多级路由）" class="headerlink" title="3.多级路由（多级路由）"></a>3.多级路由（多级路由）</h3><ol>
 <li><p>配置路由规则，使用children配置项：</p>
@@ -511,7 +511,7 @@
 </ol>
 <h3 id="4-路由的query参数"><a href="#4-路由的query参数" class="headerlink" title="4.路由的query参数"></a>4.路由的query参数</h3><ol>
 <li><p>传递参数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 跳转并携带query参数，to的字符串写法 --&gt;</span><br><span class="line">&lt;router-link :to=&quot;/home/message/detail?id=666&amp;title=你好&quot;&gt;跳转&lt;/router-link&gt;</span><br><span class="line">				</span><br><span class="line">&lt;!-- 跳转并携带query参数，to的对象写法 --&gt;</span><br><span class="line">&lt;router-link </span><br><span class="line">	:to=&quot;&#123;</span><br><span class="line">		path:&#x27;/home/message/detail&#x27;,</span><br><span class="line">		query:&#123;</span><br><span class="line">		   id:666,</span><br><span class="line">            title:&#x27;你好&#x27;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;&quot;</span><br><span class="line">&gt;跳转&lt;/router-link&gt;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 跳转并携带query参数，to的字符串写法 --&gt;</span><br><span class="line">&lt;router-link :to=&quot;/home/message/detail?id=666&amp;title=你好&quot;&gt;跳转&lt;/router-link&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 跳转并携带query参数，to的对象写法 --&gt;</span><br><span class="line">&lt;router-link </span><br><span class="line">	:to=&quot;&#123;</span><br><span class="line">		path:&#x27;/home/message/detail&#x27;,</span><br><span class="line">		query:&#123;</span><br><span class="line">		   id:666,</span><br><span class="line">            title:&#x27;你好&#x27;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;&quot;</span><br><span class="line">&gt;跳转&lt;/router-link&gt;</span><br></pre></td></tr></table></figure></li>
 <li><p>接收参数：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$route.<span class="property">query</span>.<span class="property">id</span></span><br><span class="line">$route.<span class="property">query</span>.<span class="property">title</span></span><br></pre></td></tr></table></figure></li>
 </ol>
@@ -531,7 +531,7 @@
 <li><p>配置路由，声明接收params参数</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">path</span>:<span class="string">&#x27;/home&#x27;</span>,</span><br><span class="line">	<span class="attr">component</span>:<span class="title class_">Home</span>,</span><br><span class="line">	<span class="attr">children</span>:[</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">path</span>:<span class="string">&#x27;news&#x27;</span>,</span><br><span class="line">			<span class="attr">component</span>:<span class="title class_">News</span></span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="attr">component</span>:<span class="title class_">Message</span>,</span><br><span class="line">			<span class="attr">children</span>:[</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="attr">name</span>:<span class="string">&#x27;xiangqing&#x27;</span>,</span><br><span class="line">					<span class="attr">path</span>:<span class="string">&#x27;detail/:id/:title&#x27;</span>, <span class="comment">//使用占位符声明接收params参数</span></span><br><span class="line">					<span class="attr">component</span>:<span class="title class_">Detail</span></span><br><span class="line">				&#125;</span><br><span class="line">			]</span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li><p>传递参数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 跳转并携带params参数，to的字符串写法 --&gt;</span><br><span class="line">&lt;router-link :to=&quot;/home/message/detail/666/你好&quot;&gt;跳转&lt;/router-link&gt;</span><br><span class="line">				</span><br><span class="line">&lt;!-- 跳转并携带params参数，to的对象写法 --&gt;</span><br><span class="line">&lt;router-link </span><br><span class="line">	:to=&quot;&#123;</span><br><span class="line">		name:&#x27;xiangqing&#x27;,</span><br><span class="line">		params:&#123;</span><br><span class="line">		   id:666,</span><br><span class="line">            title:&#x27;你好&#x27;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;&quot;</span><br><span class="line">&gt;跳转&lt;/router-link&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 跳转并携带params参数，to的字符串写法 --&gt;</span><br><span class="line">&lt;router-link :to=&quot;/home/message/detail/666/你好&quot;&gt;跳转&lt;/router-link&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 跳转并携带params参数，to的对象写法 --&gt;</span><br><span class="line">&lt;router-link </span><br><span class="line">	:to=&quot;&#123;</span><br><span class="line">		name:&#x27;xiangqing&#x27;,</span><br><span class="line">		params:&#123;</span><br><span class="line">		   id:666,</span><br><span class="line">            title:&#x27;你好&#x27;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;&quot;</span><br><span class="line">&gt;跳转&lt;/router-link&gt;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>特别注意：路由携带params参数时，若使用to的对象写法，则不能使用path配置项，必须使用name配置！</p>
@@ -540,16 +540,17 @@
 <li><p>接收参数：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$route.<span class="property">params</span>.<span class="property">id</span></span><br><span class="line">$route.<span class="property">params</span>.<span class="property">title</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="7-路由的props配置"><a href="#7-路由的props配置" class="headerlink" title="7.路由的props配置"></a>7.路由的props配置</h3><p>​    作用：让路由组件更方便的收到参数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">name</span>:<span class="string">&#x27;xiangqing&#x27;</span>,</span><br><span class="line">	<span class="attr">path</span>:<span class="string">&#x27;detail/:id&#x27;</span>,</span><br><span class="line">	<span class="attr">component</span>:<span class="title class_">Detail</span>,</span><br><span class="line"></span><br><span class="line">	<span class="comment">//第一种写法：props值为对象，该对象中所有的key-value的组合最终都会通过props传给Detail组件</span></span><br><span class="line">	<span class="comment">// props:&#123;a:900&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//第二种写法：props值为布尔值，布尔值为true，则把路由收到的所有params参数通过props传给Detail组件</span></span><br><span class="line">	<span class="comment">// props:true</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">//第三种写法：props值为函数，该函数返回的对象中每一组key-value都会通过props传给Detail组件</span></span><br><span class="line">	<span class="title function_">props</span>(<span class="params">route</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> &#123;</span><br><span class="line">			<span class="attr">id</span>:route.<span class="property">query</span>.<span class="property">id</span>,</span><br><span class="line">			<span class="attr">title</span>:route.<span class="property">query</span>.<span class="property">title</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7-路由的props配置"><a href="#7-路由的props配置" class="headerlink" title="7.路由的props配置"></a>7.路由的props配置</h3><pre><code>作用：让路由组件更方便的收到参数
+</code></pre>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="attr">name</span>:<span class="string">&#x27;xiangqing&#x27;</span>,</span><br><span class="line">	<span class="attr">path</span>:<span class="string">&#x27;detail/:id&#x27;</span>,</span><br><span class="line">	<span class="attr">component</span>:<span class="title class_">Detail</span>,</span><br><span class="line"></span><br><span class="line">	<span class="comment">//第一种写法：props值为对象，该对象中所有的key-value的组合最终都会通过props传给Detail组件</span></span><br><span class="line">	<span class="comment">// props:&#123;a:900&#125;</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//第二种写法：props值为布尔值，布尔值为true，则把路由收到的所有params参数通过props传给Detail组件</span></span><br><span class="line">	<span class="comment">// props:true</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//第三种写法：props值为函数，该函数返回的对象中每一组key-value都会通过props传给Detail组件</span></span><br><span class="line">	<span class="title function_">props</span>(<span class="params">route</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> &#123;</span><br><span class="line">			<span class="attr">id</span>:route.<span class="property">query</span>.<span class="property">id</span>,</span><br><span class="line">			<span class="attr">title</span>:route.<span class="property">query</span>.<span class="property">title</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="8-lt-router-link-gt-的replace属性"><a href="#8-lt-router-link-gt-的replace属性" class="headerlink" title="8.&lt;router-link&gt;的replace属性"></a>8.<code>&lt;router-link&gt;</code>的replace属性</h3><ol>
 <li>作用：控制路由跳转时操作浏览器历史记录的模式</li>
-<li>浏览器的历史记录有两种写入方式：分别为<code>push</code>和<code>replace</code>，<code>push</code>是追加历史记录，<code>replace</code>是替换当前记录。路由跳转时候默认为<code>push</code></li>
-<li>如何开启<code>replace</code>模式：<code>&lt;router-link replace .......&gt;News&lt;/router-link&gt;</code></li>
+<li>浏览器的历史记录有两种写入方式：分别为 <code>push</code>和 <code>replace</code>，<code>push</code>是追加历史记录，<code>replace</code>是替换当前记录。路由跳转时候默认为 <code>push</code></li>
+<li>如何开启 <code>replace</code>模式：<code>&lt;router-link replace .......&gt;News&lt;/router-link&gt;</code></li>
 </ol>
 <h3 id="9-编程式路由导航"><a href="#9-编程式路由导航" class="headerlink" title="9.编程式路由导航"></a>9.编程式路由导航</h3><ol>
-<li><p>作用：不借助<code>&lt;router-link&gt; </code>实现路由跳转，让路由跳转更加灵活</p>
+<li><p>作用：不借助 <code>&lt;router-link&gt; </code>实现路由跳转，让路由跳转更加灵活</p>
 </li>
 <li><p>具体编码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//$router的两个API</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">push</span>(&#123;</span><br><span class="line">	<span class="attr">name</span>:<span class="string">&#x27;xiangqing&#x27;</span>,</span><br><span class="line">		<span class="attr">params</span>:&#123;</span><br><span class="line">			<span class="attr">id</span>:xxx,</span><br><span class="line">			<span class="attr">title</span>:xxx</span><br><span class="line">		&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">replace</span>(&#123;</span><br><span class="line">	<span class="attr">name</span>:<span class="string">&#x27;xiangqing&#x27;</span>,</span><br><span class="line">		<span class="attr">params</span>:&#123;</span><br><span class="line">			<span class="attr">id</span>:xxx,</span><br><span class="line">			<span class="attr">title</span>:xxx</span><br><span class="line">		&#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">forward</span>() <span class="comment">//前进</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">back</span>() <span class="comment">//后退</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">$router</span>.<span class="title function_">go</span>() <span class="comment">//可前进也可后退</span></span><br></pre></td></tr></table></figure></li>
@@ -844,9 +845,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="vue">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="vue路由">
                         
-                        <span class="card-title">vue</span>
+                        <span class="card-title">vue路由</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -894,9 +895,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="vue">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="vuex-persistedstate">
                         
-                        <span class="card-title">vue</span>
+                        <span class="card-title">vuex-persistedstate</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
