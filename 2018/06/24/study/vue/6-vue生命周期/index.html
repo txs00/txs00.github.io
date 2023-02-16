@@ -482,7 +482,7 @@
 
 <h2 id="Vue中created与mounted请求数据的区别"><a href="#Vue中created与mounted请求数据的区别" class="headerlink" title="Vue中created与mounted请求数据的区别"></a>Vue中created与mounted请求数据的区别</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">首先，created() 和 mounted() 都可以访问原型上的 data 和 props </span><br><span class="line"></span><br><span class="line">created() 和 mounted() 之间的根本区别在于访问DOM，在 created()中返回 null，在 mounted() 中返回 DOM元素</span><br><span class="line"></span><br><span class="line">因此，任何 DOM 操作，甚至使用方法获取 DOM 元素结构将无法在 created() 中使用。因此根据这点区别created() 非常适合调用 API，而 mounted() 非常适合在 DOM 元素完全加载后执行任何操作。</span><br></pre></td></tr></table></figure>
 
-<h2 id="vue生命周期流程图"><a href="#vue生命周期流程图" class="headerlink" title="vue生命周期流程图"></a>vue生命周期流程图</h2><p><img src="image/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/1676516002473.png" alt="1676516002473"></p>
+<h2 id="vue生命周期流程图"><a href="#vue生命周期流程图" class="headerlink" title="vue生命周期流程图"></a>vue生命周期流程图</h2><p><img src="/../../image/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/1676516002473.png" alt="1676516002473"></p>
 
                 
             </div>
