@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="归档: 2019/11, 博客CS">
-    <meta name="description" content="博客CS">
+    <meta name="keywords" content="归档: 2019/11, 博客技术分享">
+    <meta name="description" content="博客技术分享">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@
 
     
 
-    <title>归档: 2019/11 | 博客CS</title>
+    <title>归档: 2019/11 | 博客技术分享</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -44,7 +44,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">博客CS</span>
+                    <span class="logo-span">博客技术分享</span>
                 </a>
             </div>
             
@@ -143,7 +143,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">博客CS</div>
+        <div class="logo-name">博客技术分享</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -312,7 +312,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                TXS
+                本博客所有内容只用于分享学习，如有侵权请联系删除
                 
             </div>
 
@@ -324,9 +324,9 @@
                     var typed = new Typed("#subtitle", {
                         strings: [ 
                             
-                                "从来没有真正的绝境, 只有心灵的迷途",
+                                "实践，是检验真理的唯一标准",
                             
-                                "Never really desperate, only the lost of the soul",
+                                "practice is the sole criterion for testing truth",
                             
                         ],
                         startDelay: 300,
@@ -793,7 +793,7 @@ Session 的用途：123session 运行在服务器端，当客户端第一次访�
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/txs00/txs00.github.io/tree/master" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/txs00" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
@@ -819,14 +819,10 @@ Session 的用途：123session 运行在服务器端，当客户端第一次访�
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
 </div>
+        <div class="desc-explain">本博客所有内容只用于分享学习，如有侵权请联系删除</div>
     </div>
 </footer>
-
 <div class="progress-bar"></div>
 
 
@@ -954,6 +950,14 @@ $(function () {
     
 
     <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
     
 
     <!-- 鼠标星星特效 -->

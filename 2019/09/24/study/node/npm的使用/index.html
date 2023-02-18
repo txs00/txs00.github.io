@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="npm简介, 博客CS">
+    <meta name="keywords" content="npm简介, 博客技术分享">
     <meta name="description" content="什么是npmnpm是一个node的包管理仓库  ，也是一个网站  ，还是一条命令
 nodejs中的第三方模块就叫做 包
 不同于 Node.js 中的内置模块与自定义模块，包是由第三方个人或团队开发出来的，免费供所有人使用。
@@ -22,7 +22,7 @@ nodejs中的第三方模块就叫做 包
 
     
 
-    <title>npm简介 | 博客CS</title>
+    <title>npm简介 | 博客技术分享</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -47,7 +47,7 @@ nodejs中的第三方模块就叫做 包
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">博客CS</span>
+                    <span class="logo-span">博客技术分享</span>
                 </a>
             </div>
             
@@ -146,7 +146,7 @@ nodejs中的第三方模块就叫做 包
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">博客CS</div>
+        <div class="logo-name">博客技术分享</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -433,8 +433,8 @@ nodejs中的第三方模块就叫做 包
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/npm/">
-                                <span class="chip bg-color">npm</span>
+                            <a href="/tags/node/">
+                                <span class="chip bg-color">node</span>
                             </a>
                         
                     </div>
@@ -487,13 +487,10 @@ nodejs中的第三方模块就叫做 包
 
 <h2 id="dependencies-与-devDependencies-之间的区别"><a href="#dependencies-与-devDependencies-之间的区别" class="headerlink" title="dependencies 与 devDependencies 之间的区别?"></a>dependencies 与 devDependencies 之间的区别?</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">dependencie 配置当前程序所依赖的其他包。   线上模式所依赖的包管理（生产模式） npm i xxx -S(--save或省略)</span><br><span class="line"></span><br><span class="line">devDependencie 配置当前程序所依赖的其他包，只会下载模块，而不下载这些模块的 测试和文档框架    开发模式所依赖的包   npm i xxx -D(--save-dev)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">如果某些包只在项目开发阶段会用到，在项目上线之后不会用到，则建议把这些包记录到 devDependencies 节点中。 与之对应的，如果某些包在开发和项目上线之后都需要用到，则建议把这些包记录到 dependencies 节点中。</span><br></pre></td></tr></table></figure>
 
-
-
 <h2 id="npm初次操作后的特点"><a href="#npm初次操作后的特点" class="headerlink" title="npm初次操作后的特点"></a>npm初次操作后的特点</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"> 初次装包完成后，在项目文件夹下多一个叫做 **node_modules** 的文件夹和 **package-lock.json** 、**package.json**的配置文件。</span><br><span class="line"></span><br><span class="line">注意： 不要手动修改 node_modules 或 package-lock.json 文件中的任何代码，npm 包管理工具会自动维护它们。</span><br><span class="line"></span><br><span class="line">npm 规定，在项目根目录中，必须提供一个叫做 package.json 的包管理配置文件。用来记录与项目有关的一些配置信息。</span><br><span class="line"></span><br><span class="line">例如： 项目的名称、版本号、描述等 项目中都用到了哪些包 哪些包只在开发期间会用到 那些包在开发和部署时都需要用到</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">在项目根目录中，创建一个叫做 package.json 的配置文件，即可用来记录项目中安装了哪些包。从而方便剔除 node_modules 目录之后，在团队成员之间共享项目的源代码。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">npm 包管理工具提供了一个快捷命令，可以在执行命令时所处的目录中，快速创建 package.json 这个包管理配置文件： 命令 ： npm init -y</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">上述命令只能在英文的目录下成功运行！所以，项目文件夹的名称一定要使用英文命名，不要使用中文，不能出现空格。</span><br><span class="line"></span><br><span class="line">运行 npm install 命令安装包的时候，npm 包管理工具会自动把包的名称和版本号，记录到 package.json 中。</span><br></pre></td></tr></table></figure>
 
 <h2 id="Yarn的入门使用"><a href="#Yarn的入门使用" class="headerlink" title="Yarn的入门使用"></a>Yarn的入门使用</h2><p><a target="_blank" rel="noopener" href="https://yarn.bootcss.com/">https://yarn.bootcss.com</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Yarn是一种命令   就是对npm命令的包装   </span><br><span class="line"></span><br><span class="line">安装命令 ： npm install yarn -g</span><br><span class="line"></span><br><span class="line">yarn的使用 ： </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> yarn add cheerio   下载第三方插件包 等价 npm install xxx  自带了--save的特性</span><br><span class="line"></span><br><span class="line">       npm install cheerio --save   ====  yarn add cheerio</span><br><span class="line"></span><br><span class="line">       npm install cheerio --save-dev ==  yarn add cheerio --dev</span><br><span class="line"></span><br><span class="line"> yarn install   ====  npm  install   批量安装package.json中的所有插件</span><br><span class="line"></span><br><span class="line"> yarn update cheerio  更新一个依赖包</span><br><span class="line"></span><br><span class="line"> yarn remove cheerio  删除一个依赖包</span><br></pre></td></tr></table></figure>
-
 
                 
             </div>
@@ -558,8 +555,8 @@ nodejs中的第三方模块就叫做 包
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/npm/">
-                                    <span class="chip bg-color">npm</span>
+                                <a href="/tags/node/">
+                                    <span class="chip bg-color">node</span>
                                 </a>
                             
                         </div>
@@ -580,132 +577,6 @@ nodejs中的第三方模块就叫做 包
 
                 </div>
             </div>
-            
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
             
         </div>
     </div>
@@ -1038,7 +909,7 @@ nodejs中的第三方模块就叫做 包
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/txs00/txs00.github.io/tree/master" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/txs00" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
@@ -1064,14 +935,10 @@ nodejs中的第三方模块就叫做 包
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
 </div>
+        <div class="desc-explain">本博客所有内容只用于分享学习，如有侵权请联系删除</div>
     </div>
 </footer>
-
 <div class="progress-bar"></div>
 
 
@@ -1199,6 +1066,14 @@ $(function () {
     
 
     <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
     
 
     <!-- 鼠标星星特效 -->
