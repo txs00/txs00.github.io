@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="python赋值运算符, 博客CS">
-    <meta name="description" content="">
+    <meta name="keywords" content="python-django简介, 博客CS">
+    <meta name="description" content="Django简介可参考下面这个网址，一些django内容非常详细
+https://m.runoob.com/django/django-intro.html
+搞Python开发时，总会遇到需要同时运行多个不同软件版本项目的时候。每个项目的依">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +21,7 @@
 
     
 
-    <title>python赋值运算符 | 博客CS</title>
+    <title>python-django简介 | 博客CS</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -309,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">python赋值运算符</h1>
+                    <h1 class="description center-align post-title">python-django简介</h1>
                 </div>
             </div>
         </div>
@@ -455,7 +457,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-06
+                    2022-05-08
                 </div>
                 
 
@@ -476,7 +478,47 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="Django简介"><a href="#Django简介" class="headerlink" title="Django简介"></a>Django简介</h2><p>可参考下面这个网址，一些django内容非常详细</p>
+<p><a target="_blank" rel="noopener" href="https://m.runoob.com/django/django-intro.html">https://m.runoob.com/django/django-intro.html</a></p>
+<p>搞Python开发时，总会遇到需要同时运行多个不同软件版本项目的时候。每个项目的依赖需求也不一样，那咋整？这个时候我们就需要用到Virtualenv了。</p>
+<p>那么什么是Virtualenv呢？Virtualenv是一个能创建隔绝的独立的Python虚拟环境工具。通过它可以防止各个项目之间因为Python版本不同或第三方库版本不同引起冲突，它能够建立多个相互独立，互不影响的Python工作环境。</p>
+<p>Virtualenv的安装很简单，一行命令就能搞定：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install virtualenv</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Virtualenv安装好之后，就是给自己的项目创建一个虚拟环境。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">virtualenv pyweb  #pyweb  为虚拟环境目录名，目录名自定义.</span><br></pre></td></tr></table></figure>
+
+<p>当然你也可以使用下面的命令创建指定Python版本的虚拟环境。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">virtualenv 环境名称 --python=/usr/bin/python3.6 pyweb    #指定创建一个版本为python3.6的虚拟环境</span><br><span class="line">virtualenv  环境名称 --python=&#x27;C:\python\python3.8.exe&#x27;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在哪个目录下创建，就会在该目录下生成一个名为pyweb的文件夹。</p>
+<p>至于启动虚拟环境，Windows下和Linux下，略有不同。</p>
+<p><strong>Linux下：</strong></p>
+<p><img src="https://www.django.cn/media/upimg/1_20180710223628_171.jpg" alt="1.jpg"></p>
+<p>我们进入创建的虚拟环境的bin目录下，然后使用如下命令启动</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source activate</span><br></pre></td></tr></table></figure>
+
+<p>启动成功之后就会在命令行前出现一个pyweb</p>
+<p><img src="https://www.django.cn/media/upimg/2_20180710224039_224.jpg" alt="2.jpg"></p>
+<p>这就说明虚拟环境启动成功。我们就可以在这个虚拟环境下做自己想要做的事了。</p>
+<p><strong>Windows下：</strong></p>
+<p>进入pyweb目录下的Scripts目录下。</p>
+<p><img src="https://www.django.cn/media/upimg/1_20180710224943_102.jpg" alt="1.jpg"></p>
+<p>然后输入：activate 回车，就能启动虚拟环境。</p>
+<p><img src="https://www.django.cn/media/upimg/3_20180710225048_180.jpg" alt="3.jpg"></p>
+<p>至于退出虚拟环境，使用如下命令即可！</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Linux下任意目录</span><br><span class="line">&gt;&gt;&gt;deactivate </span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;windows cd 进入虚拟环境Scripts目录</span><br><span class="line">&gt;&gt;&gt;deactivate.exe</span><br></pre></td></tr></table></figure>
+
+
+
+<p>安装virtualenv以后，我们不同的项目只需要安装不同的虚拟环境，在不同的环境下工作，就不再相互影响到。妈妈再也不用担心我们出现各种莫名其妙的坑了。</p>
+<p>大家可以看下原网址：</p>
+<p><a target="_blank" rel="noopener" href="https://www.django.cn/article/show-5.html">https://www.django.cn/article/show-5.html</a></p>
+
                 
             </div>
             <hr/>
@@ -502,7 +544,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://txs00.github.io/2022/04/06/study/python/template/">https://txs00.github.io/2022/04/06/study/python/template/</a>
+                    <a href="https://txs00.github.io/2022/05/08/study/python/python-django/">https://txs00.github.io/2022/05/08/study/python/python-django/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -719,13 +761,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/06/study/python/python%E6%88%90%E5%91%98%E8%BF%90%E7%AE%97%E7%AC%A6/">
+                <a href="/2022/05/10/study/python/python-django%E5%88%9B%E5%BB%BA/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="python成员运算符">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="python-django创建命令">
                         
-                        <span class="card-title">python成员运算符</span>
+                        <span class="card-title">python-django创建命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -736,7 +778,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-06
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-10
                         </span>
                         <span class="publish-author">
                             
@@ -768,13 +810,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/02/study/python/python%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                <a href="/2022/05/04/study/python/python%E7%B1%BB%E5%B1%9E%E6%80%A7%E3%80%81%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="python字符串">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="python类和对象">
                         
-                        <span class="card-title">python字符串</span>
+                        <span class="card-title">python类和对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -785,7 +827,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
                             </span>
                         <span class="publish-author">
                             
